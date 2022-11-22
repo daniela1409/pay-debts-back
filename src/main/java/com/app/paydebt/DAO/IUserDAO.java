@@ -11,7 +11,7 @@ import com.app.paydebt.model.Bank;
 import com.app.paydebt.model.User;
 
 @Repository
-public interface IUserDAO extends CrudRepository<User, UUID>{
+public interface IUserDAO extends CrudRepository<User, String>{
 	
 	 public List<User> findUsersBybanksId(String userId);
 }

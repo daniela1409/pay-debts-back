@@ -13,12 +13,25 @@ import com.app.paydebt.model.Bank;
 public class BankServiceImpl implements IBankService{
 	
 	@Autowired
-	private IBankDAO ibankDao;
+	private IBankDAO iBankDao;
+	
+	@Autowired
+	private IUserService iUserService;
 
 	@Override
 	public List<Bank> findBanksByUsersId(String userId) {
 		
-		return ibankDao.findBanksByUsersId(userId);
+		if(iUserService.findUserById(userId) != null) {
+			return iBankDao.findBanksByUsersId(userId);
+		}
+		
+		return null;
+	}
+
+	@Override
+	public Bank findBankById(Integer bankId) {
+		
+		return iBankDao.findById(bankId).orElse(null);
 	}
 
 	

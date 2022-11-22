@@ -15,9 +15,21 @@ public class DebtServiceImp implements IDebtService {
 	@Autowired
 	private IDebtDAO iDebDao;
 
+	@Autowired
+	private IUserService iUserService;
+
+	@Autowired
+	private IBankService iBankService;
+
 	@Override
 	public List<Debt> findDebtByBankIdAndUserId(Integer bankId, String userId) {
-		return iDebDao.findDebtByBankIdAndUserId(bankId, userId);
+
+		if (iUserService.findUserById(userId) != null && iBankService.findBankById(bankId) != null) {
+			return iDebDao.findDebtByBankIdAndUserId(bankId, userId);
+		}
+
+		return null;
+
 	}
 
 	@Override
@@ -31,31 +43,41 @@ public class DebtServiceImp implements IDebtService {
 
 		Debt debt = this.findDebtById(debtDTO.getId());
 
-		if (debt == null) {
-			return false;
+		if (debt == null || debtDTO.getQuotasNumber() == null) {
+			throw new RuntimeException("Deuda no existente o número de cuotas invalido");
 		}
 
-		if (debt.getQuotasNumber() == 0) {
+		if (debt.getQuotasNumber() == 0 && debt.getStatus() == true) {
 			debt.setQuotasNumber(debtDTO.getQuotasNumber());
+		}
+
+		if (debt.getStatus() == false) {
+			throw new RuntimeException("La deuda ya está saldada");
 		}
 
 		Double totalCount = debt.getTotalCount();
 		Double totalDebt = debt.getTotalDebt();
 		Integer QuotasNumber = debt.getQuotasNumber();
 
-		Double quota = totalCount / QuotasNumber;
+		Double quota = debt.getQuotaValue();
+
+		if (quota == 0) {
+			quota = totalCount / QuotasNumber;
+			debt.setQuotaValue(totalCount / QuotasNumber);
+		}
+
 		totalDebt = totalDebt - quota;
 		debt.setTotalDebt(totalDebt);
+		debt.setQuotasNumber(debt.getQuotasNumber() - 1);
 
 		if (totalDebt == 0) {
 			debt.setStatus(false);
-
 		}
 
 		this.saveDebt(debt);
-		
+
 		return true;
-			
+
 	}
 
 	@Override

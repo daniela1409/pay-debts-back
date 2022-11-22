@@ -1,21 +1,23 @@
 package com.app.paydebt.DTO;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 public class DebtDTO {
 
-	@NotEmpty
+	@Min(1)
 	private Integer id;
 
-	@NotEmpty
-	private Integer QuotasNumber;
+	@Min(1)
+	private Integer quotasNumber;
 
 	public Integer getQuotasNumber() {
-		return QuotasNumber;
+		return quotasNumber;
 	}
 
 	public void setQuotasNumber(Integer quotasNumber) {
-		QuotasNumber = quotasNumber;
+		this.quotasNumber = quotasNumber;
 	}
 
 	public Integer getId() {

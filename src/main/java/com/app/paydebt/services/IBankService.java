@@ -7,4 +7,5 @@ import com.app.paydebt.model.Bank;
 
 public interface IBankService {
 	public  List<Bank> findBanksByUsersId(String userId);
+	public Bank findBankById(Integer bankId);
 }

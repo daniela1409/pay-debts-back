@@ -29,6 +29,8 @@ public class Debt {
 	@Column(name = "total_debt")
 	private Double totalDebt;
 
+	private Double QuotaValue;
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JsonIgnore
 	@NotNull
@@ -118,6 +120,14 @@ public class Debt {
 
 	public void setTotalDebt(Double totalDebt) {
 		this.totalDebt = totalDebt;
+	}
+
+	public Double getQuotaValue() {
+		return QuotaValue;
+	}
+
+	public void setQuotaValue(Double quotaValue) {
+		QuotaValue = quotaValue;
 	}
 
 }
