@@ -1,5 +1,4 @@
 CREATE SCHEMA `db_pay_debts` ;
-
 INSERT INTO db_pay_debts.banks (id, name, create_at) VALUES(1, 'Bancolombia', NOW());
 INSERT INTO db_pay_debts.banks (id, name, create_at) VALUES(2, 'Banco de Bogota', NOW());
 INSERT INTO db_pay_debts.banks (id, name, create_at) VALUES(3, 'Banco de Occidente', NOW());
@@ -13,11 +12,21 @@ INSERT INTO db_pay_debts.banks (id, name, create_at) VALUES(10, 'Banco Agrario',
 INSERT INTO db_pay_debts.banks (id, name, create_at) VALUES(11, 'Banco Colpatria', NOW());
 
 INSERT INTO db_pay_debts.users (id, name, address, email, password, phone, create_at) VALUES('psX5PbFyD2ecmchB2pbMnFIycHP2','Paseo de Sevilla' , 'Daniela Osorio', 'jedagos1409@gmail.com', 140994, '3014510118', NOW());
+INSERT INTO db_pay_debts.users (id, name, address, email, password, phone, create_at) VALUES('8BAkDFSF8LVPeyGsv1dfnjblpLA3','Paseo de Sevilla' , 'Daniela Osorio', 'jedagos@hotmail.com', 123456, '3014510118', NOW());
+
 
 INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value, create_at) VALUES(1, 0, 10000000, 10000000,  1, 'psX5PbFyD2ecmchB2pbMnFIycHP2', true, 0, NOW());
 INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value,  create_at) VALUES(2, 0, 5000000, 5000000,  1, 'psX5PbFyD2ecmchB2pbMnFIycHP2', true, 0,  NOW());
 INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value,  create_at) VALUES(3, 0, 20000000, 20000000,  2, 'psX5PbFyD2ecmchB2pbMnFIycHP2', true, 0,  NOW());
 INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value,  create_at) VALUES(4, 0, 3000000, 3000000,  2, 'psX5PbFyD2ecmchB2pbMnFIycHP2', true, 0,  NOW());
 
+INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value, create_at) VALUES(5, 0, 10000000, 10000000,  1, '8BAkDFSF8LVPeyGsv1dfnjblpLA3', true, 0, NOW());
+INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value,  create_at) VALUES(6, 0, 5000000, 5000000,  1, '8BAkDFSF8LVPeyGsv1dfnjblpLA3', true, 0,  NOW());
+INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value,  create_at) VALUES(7, 0, 20000000, 20000000,  3, '8BAkDFSF8LVPeyGsv1dfnjblpLA3', true, 0,  NOW());
+INSERT INTO db_pay_debts.debts (id, quotas_number, total_count, total_debt, bank_id, user_id, status, quota_value,  create_at) VALUES(8, 0, 3000000, 3000000,  3, '8BAkDFSF8LVPeyGsv1dfnjblpLA3', true, 0,  NOW());
+
 INSERT INTO db_pay_debts.user_banks (user_id, bank_id) VALUES('psX5PbFyD2ecmchB2pbMnFIycHP2',1);
 INSERT INTO db_pay_debts.user_banks (user_id, bank_id) VALUES('psX5PbFyD2ecmchB2pbMnFIycHP2',2);
+
+INSERT INTO db_pay_debts.user_banks (user_id, bank_id) VALUES('8BAkDFSF8LVPeyGsv1dfnjblpLA3',1);
+INSERT INTO db_pay_debts.user_banks (user_id, bank_id) VALUES('8BAkDFSF8LVPeyGsv1dfnjblpLA3',3);

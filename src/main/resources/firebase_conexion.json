@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "paydebts-406b0",
+  "private_key_id": "8dc64a7c303006ff72146f82d5987be1d82a5fb2",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCzeCQnt9k68R2A\nYLV0YJ3gQoFDQ8fcLFBoLb8kNSIU/RUlT3WH6zlApxRWqx7enNiu3Bib0lc3QTPD\n4vA6OUmV6irkRyvx3VNVRF7EVQAxHWugRlomo4bF+C3LVnaWe3xhMFuBXtIAwIDl\ng6IxvXwLe5fXRSZTAYqNchsuilb+42UTFO0nmSC+ZFUgz+kxlZRWRA9sfw9Uykqy\ny8FWtFH5bb+1OZqxLcLzAPqFEQEKM2Dz9Y5N6VCR1eT98limCrvSCJsfhY1r69Q4\nqKkBtPZ/A/m8wtTcDsRZg7cFPX+WNxNs2F/2t/nryAuew6oKCi6trepI1gsLWUUk\nOcF27szNAgMBAAECggEACp14OKfa1RipL7cIpInebK2iVacvAr/Vla6MWAjogNNN\n/+HznVwgC8nrcwuLYja8E5j4alGw+kIEsiO8em/PAWtTVCM9idXByxD7MKOnxOqX\nkL2jMWvfWdr0YnWKbXDVCi6WYFA1HaRFO3i4tuEdSCnsRj2p0aO4B+ZljdrS4HUw\nbUoNpUzrGrmlf/8jfEIJRp/1+556ufZRPsGh/kwsqSed1q/6vveiN4h9bgG7QcOE\n9EGfGjx/OEtbaqFfX4Qr1lAaLJe++oIgx2D5BhYqojXupN1EuIty0qbPQ3Gjj63/\n77Iijq54KxzdCbB/3WN84BVaPxnEFxn9JfR8A5bsIQKBgQD5MBOmgxSxS9bUYsxf\naiMTXZ4rp3bU7ebJQCGcxunGnvLbehUmI1MFzijUSmXNysvpJZKTUfrLYVNCs09C\n1+Swo/Xc74s5D3aTxsxGlE8cuFt5XMAfDpDnAdyL9PZWwx4xmtq0Ue+SfGDM46hY\n25C/ay5hPqKSAB/wY0YX0by4VQKBgQC4YCT8oWXrV+kLQWUSdZvrt5psotBgw9nD\nBcUPdHX4NmzH8e+jI5y2o4gnNYHAp4t6uhLkXPk7ofnbxVAGwUzw4qhRQreLqlYV\nQ5T9HYTMegjMzIBC0HPNT0SYbx7UYVBtNehM3SMAU9b6UbDG8QKbpWnq+M8qLTrx\nkAoCRLwamQKBgAGijR50kbgwFTLDiy+9FInV/Wmv6ZmwDemYICBVNcd114YVIPpl\nFPBez+nEqzJUeE4JTxLkYM7gzpkLcCOyIu/9w2k1sSYosdB6Z3C3HGXF1+PN9fy+\nLbk2S+onK06abSJKL9ErEHVXl5MAk2Qx3JtE6sL8lDh9A7iiDh2t5J0ZAoGAD0SO\n64il+vYdqzvwFbY9giiDFinpXYn6V2b76Yq4ViSTn38OXBEP4iPqm2yX4Q8+wpv0\nAoscbG6+VQ+iz9xj9bKfQ5NlxaAGXt5o0QkHvTMB1Yu9t0qxvDerM4BIKkggs9p5\n8RuC0X0f2Ty4idDdaWwqODYAWbrDHcvSuFtexEkCgYASmZxHSsKA4C/C4Mb95oK6\nV3Qc1KLI4Yp1zCAtuM8lUxnCFGqqVk8T9xq1yXRyUBmZGmk97paT6vpnO+XIUEpG\nfBcTWsddKCiMFf19ZAOv67RPziaEAHOWrhoSYk6WJTnW/bs6D1R7qU/oO2MHBIDM\n88/F3VaiF3WjkqJzQiXAaw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-vaj31@paydebts-406b0.iam.gserviceaccount.com",
+  "client_id": "104887537348256848865",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-vaj31%40paydebts-406b0.iam.gserviceaccount.com"
+}
