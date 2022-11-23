@@ -7,6 +7,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,6 +19,7 @@ import com.app.paydebt.model.Debt;
 import com.app.paydebt.services.IBankService;
 import com.app.paydebt.services.IDebtService;
 
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("pay_debts")
 public class PayDebtsController {
