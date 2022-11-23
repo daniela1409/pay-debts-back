@@ -48,12 +48,6 @@ public class PayDebtsController {
         }
 		return response;
 		
-		
-//		DebtDTO debtDTO = new DebtDTO();
-//		debtDTO.setId(1);
-//		debtDTO.setQuotasNumber(1);
-//		
-//		boolean payDebts = iDebtService.payDebt(debtDTO);
 	}
 	
 }
